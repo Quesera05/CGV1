@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MAZE WALKER</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="base.css">
+
+  <style>
+    body {
+      background-image: url(./MainMenu/MazeCastle.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      background-attachment: fixed;
+    }
+    #GameName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-size: 50px;
+      color:greenyellow;
+    }
+    #Parent {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .button {
+      background-color: #4CAF50;
+    }
+
+  #Sidenav s {
+  position: fixed;
+  right: -80px;
+  transition: 0.3s;
+  padding:15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: transparent;
+  border-radius: 0 1px 1ox 0;
+  }
+
+    #Sidenav s:hover {
+      right: 0;
+      color: white;
+    }
+
+    #control {
+      top: 20px;
+      background-color: #04aa6d;
+    }
+
+    #Restart{
+      color: orange;
+      font-size: 50px;
+      position: absolute;
+      top: 46%;
+      left:42%
+    }
+
+    #Pause {
+      color: white; font-size: 50px;
+      position: absolute; top: 5%; left: 42%;
+    }
+
+    #LevelTimer {
+      color: orange; font-size: 50px;
+      position: absolute; top: 5%; left: 58%;
+    }
+
+    #Win {
+      color: white; font-size: 50px;
+      position: absolute; top: 46%; left: 42%;
+    }
+
+    #Lose {
+      color: red; font-size: 50px;
+      position: absolute; top: 46%; left: 42%;
+    } 
+  </style>
+</head>
+<body>
+
+  <div id = "Sidenav" class = "sidenav">
+    <s href="#" id = "control"><strong>Controls:</strong><br>w - up<br>s - down<br>a - left<br>d-right</s>
+
+  </div>
+
+  <div id="GameName">
+    <p>Maze Walker</p>
+  </div>
+  
+  <div id="Parent">
+    <div id="Levels">
+      <button id= "0">
+        Level 0
+      </button>
+      <button id= "1">
+        Level 1
+      </button>
+      <button id= "2">
+        Level 2
+      </button>
+      <button id= "3">
+        Level 3
+      </button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" id="closePopup" onclick="level0()" >&times;</div>
+      <h1 class = "heading"> WELCOME TO THE MAZE RUNNER</h1>
+      <p class = "paragraph"> We've heard you're on a journey to become a great warrior.
+        <br>
+        You've been tasked with the mission to complete these challenging maze runs in order to become one of the greatest.
+        <br>
+        Each level you will be transported to a unique maze. In order to win each level, you'll need to find your way around the maze to the "enemy" and defeat the enemy before the timer runs out.
+        <br>
+        Good luck!
+      </p>
+    
+    </div>
+  </div>
+
+  
+  <div id="Pause"></div>
+  <div id="LevelTimer"></div>
+  <div id="Win"></div>
+  <div id="Lose"></div>
+  <script src="./js/main.js" type="module"></script>
+  <script src="./Resources/objects/Water2.js" type="module"></script>
+</body>
+</html>
