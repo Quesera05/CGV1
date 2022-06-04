@@ -54,6 +54,8 @@ function Level2Init() {
     var gravity = { x: 0.0, y: -9.81, z: 0.0 };
     var world = new RAPIER.World(gravity);
 
+    //git test comment
+
     //Shader
 
     const _VS = `
@@ -377,7 +379,7 @@ function Level2Init() {
     
 
     //Torches
-    /*var torchModel;
+    var torchModel;
 
     const managerTorch = new THREE.LoadingManager();
     managerTorch.onLoad = function() { //when torch model has been loaded. Can clone a bunch of torches in here
@@ -392,7 +394,7 @@ function Level2Init() {
       fbx.scale.setScalar(0.02);
 
       torchModel = model;
-    });*/
+    });
 
 
     //player model with animations
